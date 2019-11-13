@@ -32,6 +32,7 @@ public class BackdoorTest {
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 700000);
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "espresso");
         capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app-debug.apk");
+        capabilities.setCapability("forceEspressoRebuild", true);
 
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         wait = new WebDriverWait(driver, 10);

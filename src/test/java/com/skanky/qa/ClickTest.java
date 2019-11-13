@@ -1,6 +1,5 @@
 package com.skanky.qa;
 
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -9,15 +8,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 public class ClickTest {
 
@@ -32,6 +27,7 @@ public class ClickTest {
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 700000);
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "espresso");
         capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app-debug.apk");
+        capabilities.setCapability("forceEspressoRebuild", true);
 
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         wait = new WebDriverWait(driver, 10);
@@ -48,7 +44,7 @@ public class ClickTest {
 
     @Test
     public void clickDemo() throws InterruptedException {
-       MobileElement e = driver.findElement(By.id("bold"));
+       MobileElement e = driver.findElement(By.id("italic"));
        e.click();
        Thread.sleep(1000);
     }
