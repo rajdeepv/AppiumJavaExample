@@ -1,4 +1,4 @@
-package com.skanky.qa;
+package com.workshop.appium;
 
 
 import com.google.common.collect.ImmutableMap;

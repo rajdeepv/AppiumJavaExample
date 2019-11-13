@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "appium": "v1.15.1"
+  },
+  "scripts": {
+    "start": "./npm-start.sh"
+  },
+  "private": true
+}

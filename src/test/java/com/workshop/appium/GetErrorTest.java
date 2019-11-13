@@ -1,4 +1,4 @@
-package com.skanky.qa;
+package com.workshop.appium;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.net.URL;
 
-public class ClickTest {
+public class GetErrorTest {
 
     private AppiumDriver<MobileElement> driver;
     private WebDriverWait wait;
@@ -44,8 +44,6 @@ public class ClickTest {
 
     @Test
     public void clickDemo() throws InterruptedException {
-       MobileElement e = driver.findElement(By.id("italic"));
-       e.click();
        Thread.sleep(1000);
     }
 
